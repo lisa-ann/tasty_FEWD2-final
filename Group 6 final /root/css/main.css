@@ -81,6 +81,7 @@ nav {
     margin: 0 auto;
 }
 nav .logo{margin-left: 20px;}
+
 .sign-in {
     background-color: var(--secondary-color);
     color: var(--light-color);
@@ -527,7 +528,7 @@ a:hover {
     border-radius: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 90%;
-    max-width: 700px;
+    max-width: 500px;
     text-align: left;
     display: flex;
     gap: 2rem;
@@ -689,7 +690,6 @@ footer h2 {
 .payment-icons img{
     width:20%;
     height:20%;
-    margin: 0 20px;
 }
 .social-icons svg{width: 30%;}
 
@@ -904,5 +904,6 @@ p{font-size: 2rem;}
     .social-media{
     grid-column: 2/3;
     grid-row: 2/3;
-    } 
+    }
+    
 }
