@@ -1,0 +1,937 @@
+/*******************************************************
+    1. VARIABLES
+ ******************************************************/
+:root {
+    --highlight-color: #ffd84c; /* yellow */
+    --light-color:  #fff;       /*  white */
+    --dark-color: #444;         /* gray */
+    --primary-color: #2251a7;   /* blue */
+    --secondary-color: #65b504; /* green */
+    --tertiary-color: #fc8c00;  /* orange */
+}
+
+/*******************************************************
+    2. GLOBAL STYLES
+ ******************************************************/
+
+html {
+    font-size: 10px;
+}
+body, input, button {
+    font-family: "Assistant", sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+main{margin: 0 10px;}
+
+h1 {
+    color:  var(--light-color);
+    text-shadow: 2px 2px 2px var(--dark-color);
+    font-size: 4rem;
+  font-family: "Caveat", serif;
+}
+h2, h3, h4, h5, h6 {
+    color: var(--dark-color);
+}
+h2 {
+    font-size: 2.8rem;
+}
+h3 {
+    font-size: 2.2rem;
+}
+h4 {
+    text-align: center;
+}
+h6 {
+    font-weight: bold;
+    margin-top: 1rem;
+}
+p {
+    margin-top: 1rem;
+}
+
+img {
+    height: auto;
+    width: 100%;
+}
+
+a, a:visited {
+    color: var(--secondary-color);
+}
+a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+ol li {
+    list-style: decimal;
+    list-style-position: inside;
+}
+.text-center {
+    text-align: center;
+}
+
+/*******************************************************
+    3. HEADER & NAV
+ ******************************************************/
+header {
+    background-color: var(--primary-color);
+    position: sticky;
+    text-align: center;
+    top: 0;
+    z-index: 5;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+nav .logo{margin-left: 20px;}
+.sign-in, .sign-in:visited {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    font-size: 2rem;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.sign-in:hover {
+    background-color: var(--highlight-color);
+    color: var(--dark-color);
+}
+
+nav .material-symbols-outlined{
+    color: var(--light-color);
+    margin-left: 5px;
+    margin-top:3px;
+}
+nav .material-symbols-outlined:hover {
+    color: var(--highlight-color);
+}
+
+/* hamburger Menu*/
+.open-menu, .close-menu{
+    position: absolute;
+    color:  var(--highlight-color);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+.open-menu{
+    top: 50%;
+    right:20px;
+    transform: translateY(-50%);
+}
+.close-menu{
+    top: 20px;
+    right: 20px;
+}
+#check{display: none;}
+.searchBar{
+    background-color: var(--light-color);
+    text-align: left;
+    width: auto;
+    border-bottom: solid 1px  var(--dark-color);
+}
+.searchBar input {
+    font-size: 1.5rem;
+    width:60%;
+    border:none;
+    margin-left: 10px;
+    
+}
+@media screen and (max-width:768px){
+    .menu{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 50%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 100;
+    background-color: var(--primary-color);
+    transition: all 0.2s ease-in-out;
+    }
+    ul {order: 1;}
+    .menu li:first-child {
+        margin-top: 4rem;
+    }    
+    .menu li {
+        list-style: none;
+        margin-top: 2rem;
+    }
+    .menu li a {padding: 1rem;}
+    .open-menu, .close-menu{display: block;}
+    .open-menu{padding: 10px;
+    margin-top: -20px;
+    }
+    .close-menu{
+        position: sticky;
+    }
+    #check:checked~ .menu{right: 0;}
+    .menu a, .menu a:visited {
+        color: var(--light-color);
+        text-decoration: none;
+    }
+    .menu a:hover {
+         color: var(--highlight-color);
+         text-decoration: none;
+    }
+}
+
+
+/* Submenu (still working on) */
+.dropdown{position:relative;}
+
+.dropdown:after{
+    color: var(--light-color);
+    content:"\25BC";
+    font-size: 1.5rem;
+    display: block;
+    position: absolute;
+    top:8%;
+    left: 110%;
+}
+
+.drop-nav{
+    position:absolute;
+    display: none;
+    background-color:var(--primary-color); 
+    width: 200px;
+}
+.drop-nav li{
+    border-bottom: 1px solid lightgray;
+}
+.dropdown:hover > .drop-nav{display: block;}
+
+/*******************************************************
+    4. MAIN BODY CONTENT
+ ******************************************************/
+/*homepage*/
+  /**hero**/
+.hero{
+    background-color: var(--highlight-color);
+    width: 100%;
+    padding: 20px;
+}
+.heroImg, .heroText, .HomeSignup-form{
+    text-align: center;
+}
+.hero img {
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 2px 2px var(--dark-color);
+    width: 100%;
+    margin: 10px;
+    border: none;
+}
+.heroText h2{
+    font-family: "Assistant", sans-serif;
+    font-size: 3rem;
+}
+.heroTitle {
+  font-size: 8rem;
+  margin-bottom: 1rem;
+    line-height: 1;
+}
+.HomeSignup-form{padding: 30px;}
+.HomeSignup-form p, .signBox{margin-bottom: 8px;}
+.HomeSignup-form input {
+  padding: 0.75rem;
+  width: 250px;
+  border: none;
+  border-radius: 4px;
+  margin-right: auto;
+}
+.create-account-btn, .signin-button, .submit-button{
+  background-color: var(--primary-color);
+  color:  var(--light-color);
+  font-size: 1.5rem;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.hero .create-account-btn:hover, .signin-button:hover, .submit-button:hover {
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+}
+
+   /**latest recipe**/
+.latest-recipes h2, .tips-tricks h2{
+    border-bottom: solid 4px var(--tertiary-color);
+}
+.recipe-carousel{
+    display: flex;
+    flex-wrap: wrap;
+}
+.recipe-card{
+    padding: 20px;
+    text-align: center;
+}
+.recipe-card img{
+    border-radius: 5%;
+    max-width: 120px;
+    max-height: 170px;
+}
+
+ /**tips**/
+ .tip-card{
+    display: flex;
+     flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+.tip-card img{
+    border-radius: 50%;
+    max-width: 200px;
+    max-height: 200px;
+
+}
+.tip-card article{
+    padding: 15px;
+}
+
+ /**Products Section **/
+.products h2{border-bottom: solid 4px var(--secondary-color);}
+.shopTitle, .books, .ware{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+.books{
+    flex-wrap: wrap;
+    border-bottom:  solid .5px lightgray;
+}
+.book-carousel, .ware-carousel{
+    text-align: center;
+}
+.shopTitle {
+    align-items: center;
+    justify-content: space-evenly;
+}
+.shopTitle h3{font-weight: 700;}
+.book-card, .cooker-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5px;
+}
+.book-card img, .productImg img{
+    border-radius: 5%;
+}
+.cooker-card img{
+    border-radius: 5%;
+}
+
+.add-to-cart {
+  background-color: var(--primary-color);
+  color:  var(--light-color);
+  font-size: 1.5rem;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 20px;
+}
+.add-to-cart:hover {
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+}
+
+
+/*tips page*/
+.signup-news, .signup-form{
+    background-color: var(--secondary-color);
+    padding: 20px;
+}
+
+/* Products page*/
+   /**productPage hero**/
+.holiday-special{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+}
+.holiday-special h1{
+    font-size: 6rem;
+    color: #eb4034;
+    text-align: center;
+}
+.promo-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap:wrap;
+    margin: 20px;
+}
+.discount{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.discount h2{
+    font-size:6rem;
+    font-weight: 800;
+    color:var(--primary-color);
+    text-align: center;
+}
+.discount h3{
+    font-size:4rem;
+    font-weight: 600;
+    color:var(--light-color);
+    text-align: center;
+}
+.discount a{align-self: flex-end;}
+.discount a, .signup-form a{
+    color:var(--highlight-color);
+}
+a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+.signup-form{
+     display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.signup-form p, .signBox{margin-bottom: 20px;}
+.signup-form input {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  margin-right: auto;
+}
+
+.create-account-btn{
+    align-self: center;
+    margin-top: 20px;
+}
+.create-account-btn:hover {
+    background-color: var(--highlight-color);
+    color: var(--dark-color);
+}
+
+   /** product section**/
+.products { border-bottom:solid 4px var(--highlight-color); }
+   /**product categories**/
+.product-categories{
+    margin: 10px;
+    gap:10px;
+}
+.product-grid, .form-row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:5px;
+}
+.product-grid h3{
+    font-size:1.5rem;
+    font-weight: bold;
+}
+.productImg img{
+    border-radius: 5%;
+}
+.product-info{
+    width: 80%;
+}
+.product-grid {
+    padding: 5px;
+    border-bottom: solid .5px lightgray;
+}
+.price {
+    font-weight: bold;
+    float: right;
+}
+
+/*Our compny page*/
+   
+.header-mission h1 {
+    margin: 0;
+    background-color:var(--highlight-color);
+    padding: 1rem;
+    text-align: center;
+    margin:3rem 0;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.mission {
+    background-image: url('../images/header-background.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.mission-content p {
+    background-color: rgba(242, 240, 240, 0.8);
+    padding: 3rem;
+    display: inline-block;
+    margin-top:0;
+   
+}
+/* journey page*/
+   /**journey section 1...**/
+.journey h2 {
+    margin: 2rem 0;
+    font-weight: 600;
+    margin-top: 3rem;
+    text-align: center; 
+}
+
+.journey ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.journey li a{
+    font-size: 2rem;
+    margin-left: 2rem;
+}
+.journey li a:hover{
+    color:var(--primary-color);
+    text-decoration: underline;
+}
+/* Team Section */
+.team {
+    text-align: center;
+    margin: 3rem 0;
+    padding-bottom: 2rem;  
+}
+
+.team-member {
+    background-color: #D9D9D9;
+    margin: 3rem auto;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+    text-align: left;
+    display: flex;
+    gap: 2rem;
+    display: block;
+    text-align: center;
+    margin-top: 5rem;
+}
+.team-section{
+    display: flex;
+}
+
+.team-member img {
+    width: 200px;
+    height: auto;
+/*    border-radius: 50%;*/
+    object-fit: cover;
+}
+
+.team-member h3 {
+    margin: 0;
+    padding-bottom: 1rem;
+    font-weight: 600;
+}
+
+.team-member p {
+    margin: 0.5rem 0 0;
+    font-size: 1.5rem;
+    text-align: left;
+    padding-left: 2rem;
+    color: var(--dark-color);
+    
+}
+/**MAGAZINE-PAGE**/
+
+
+.magazine{
+    padding:2rem 4rem;
+    font-size: 1.8rem;
+}
+
+.magazine ul{
+    list-style-type: circle;
+    margin-left: 3rem;
+    font-size: 1.5rem;
+}
+.magazine h3, h4{
+    color: var(--dark-color);
+    margin: 3rem 0;
+}
+.magazine h5{
+    font-size: 1rem;
+    margin: 4rem;
+    text-align: end;
+
+}
+
+/*contact us page*/
+.contactUSpage{
+    max-width: 1200px;
+}
+.contactUSpage h2{
+     font-family: "Caveat", serif;
+    font-size: 4rem;
+    color: var(--primary-color);
+}
+.contactUSpage h3{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.signin-section{margin-bottom: 40px;}
+
+.signin-form, .contact-form{
+    background-color: #ede8e8;
+    font-size: 2rem;
+    padding: 30px 0;
+    border-radius: 6px;
+}
+.diet-type, .meals-type{
+    border-bottom: dashed .8px gray;
+    margin-bottom: 30px;
+}
+.radio-group, .checkbox-group{
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 400px;
+    flex-wrap: wrap;
+    margin: 5px;
+}
+.radio-group label, .checkbox-group label{padding: 20px;}
+.signin-form p{
+    color: gray;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+#message{border: none;}
+.signin-button, .submit-button{
+    text-align: center;
+    width:95%;
+}
+
+/*empty cart page (lu)*/
+.empty-cart{
+    text-align: center;
+}
+
+/*Ads(lu)*/
+.ad{text-align: center;}
+.ad h2{
+    font-size:1.5rem;
+    color: #444;
+}
+
+
+
+/*******************************************************
+    6. FOOTER
+ ******************************************************/
+footer {
+    background-color: var(--primary-color);
+    color:  var(--light-color);
+    padding: 2rem;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+footer h2 {
+    color: var(--light-color);
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+.customer-service, .payment-method, .social-media {
+    align-self: center;
+    margin: 20px;
+}
+.payment-icons, .social-icons {
+    display: flex;
+    justify-content: space-around;
+}
+.payment-icons{
+    margin: 20px;
+    flex-wrap: wrap;}
+    
+.payment-icons img{
+    width:20%;
+    height:20%;
+   
+}
+.social-icons {
+    font-size: 2.5rem;
+}
+
+footer a, footer a:visited {
+    color:  var(--light-color);
+}
+
+footer a:hover {
+    color: var(--highlight-color);
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.copyright p {
+    font-size: 1.5rem;
+    margin: 0;
+    align-self: center;
+}
+.adImg img{ width: 60%;
+height: auto;}
+
+
+/*******************************************************
+    7. FORMS
+ ******************************************************/
+input[type=submit], button {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    border: 0;
+    color:  var(--light-color);
+    font-family: "Assistant", sans-serif;
+    margin: 1rem auto;
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold
+}
+
+input[type=submit]:hover, button:hover {
+    background-color: var(--secondary-color);
+    color:  var(--light-color);
+    cursor: pointer;
+}
+
+input[type=text], input[type=number], input[type=email], input[type=tel], textarea, select {
+    border: 1px solid var(--dark-color);
+    font-family: "Assistant", sans-serif;
+    margin: 1rem 0 2rem;
+    padding: .75rem;
+    width: 90%;
+    display: block;
+}
+
+fieldset {
+    margin: 2rem 0;
+    padding: 2rem;
+}
+
+legend {
+    color: var(--primary-color);
+    border-bottom: 1px dashed var(--primary-color);
+    text-align: center;
+}
+
+/*******************************************************
+    8. MEDIA QUERIES
+ ******************************************************/
+
+@media screen and (min-width:768px){
+   header, .hero, .holiday-special, main, footer>*{
+        max-width:1200px;
+        margin: auto;
+    }
+    /*Nav large*/
+    .nav-menu {
+    display: flex;
+    list-style: none;
+    gap:30px;
+    }
+
+   .nav-menu a {
+    color: var(--light-color);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+   .nav-menu a:hover {
+    color: var(--highlight-color);
+}
+    .material-symbols-outlined{margin-right: 30px;}
+    
+    /**homepage hero large**/
+  .hero{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
+  .heroImg{
+    grid-column: 1/2;
+    grid-row: 1/3;  
+   }
+  .heroText{
+    grid-column: 2/3;
+    grid-row: 1/2;
+   }
+  .HomeSignup-form{
+    grid-column: 2/3;
+    grid-row: 2/3;
+   }
+  .heroText, HomeSignup-form{
+    padding: 30px;
+   }
+  .recipe-link {
+  color: var(--secondary-color);
+  text-decoration: none;
+  }
+  .HomeSignup-form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+   }
+    
+    /**recipe section large**/
+  .recipe-carousel{ flex-wrap: nowrap;}
+  .tips-carousel{display: flex;}
+  .recipe-card img{
+    max-width: 200px;
+    max-height: 250px;
+  }
+    
+    /**Products Section large **/
+    .products-carousel {
+        display: flex;
+        gap:8rem;
+    }
+   .books{
+    flex-wrap: nowrap;
+    border-bottom: none;
+   }
+    
+    /**productPage hero large**/
+    
+    .promo-content{flex-wrap:nowrap;}
+    .holiday-special h1{font-size: 8rem;}
+    .discount h2{font-size:8rem;}
+    .discount h3{font-size:6rem;}
+    
+    /**product categories large**/
+    .category-cookbooks, .product-actions, .category-cookware{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .product-grid{
+        max-width: 800px;
+        border-bottom:none;
+    }
+    .product-info{
+        width: 60%;
+        padding: 20px;
+    }
+    .product-actions{
+    max-width: 400px;
+    margin: 10px;
+}
+    .category-cookbooks, .category-cookware{border-bottom: solid .5px lightgray;}
+    
+    /**ABOUT-US large*/
+p{font-size: 2rem;}
+
+    
+.journey {
+    text-align: center;
+}
+
+.journey h2 {
+    margin: 3rem 0;
+}
+
+.journey ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Flexbox for alignment */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-around; /* Center the items */
+    gap: 5rem; /* Space between items */
+}
+    .journey ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D9D9D9; /* Light orange background */
+    border-radius: 50%; /* Makes the background round */
+    width: 250px; /* Fixed width for round shape */
+    height: 250px; /* Fixed height for round shape */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.journey ul li:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    background-color: var(--highlight-color); /* Change background color on hover */
+}
+
+.journey ul li a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight:600;
+    transition: color 0.3s ease;
+    text-align: center;
+    font-size: 2rem;
+    margin: 0;
+}
+    .team{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+ /*OUR-JOURNEY page large*/
+    .magazine{
+        font-size: 3rem;
+    }
+    .magazine ul{
+        font-size: 2rem;
+    }
+
+    
+    /**contact us page large**/
+    .contactUSpage{
+       display: flex;
+        flex-wrap: wrap;
+       justify-content: space-around;
+       padding: 20px;
+       margin: auto;
+    }
+
+    /*footer large*/
+    .footer-content{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+    .customer-service{
+      grid-column: 1/2;
+      grid-row: 1/3;  
+     }
+    .payment-method{
+        grid-column: 2/3;
+        grid-row: 1/2;
+        flex-wrap: nowrap;
+    }
+    .social-media{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    }   
+}
