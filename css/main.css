@@ -453,6 +453,8 @@ a:hover {
     margin:3rem 0;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
     text-shadow: none;
+    color: black;
+    font-family: sans-serif;
 }
 
 .mission {
@@ -528,7 +530,8 @@ a:hover {
 
 .team-member h3 {
     margin: 0;
-    padding-bottom: 1rem
+    padding-bottom: 1rem;
+    font-weight: 600;
 }
 
 .team-member p {
@@ -646,7 +649,7 @@ footer h2 {
 }
 .customer-service, .payment-method, .social-media {
     align-self: center;
-    margin; 20px;
+    margin: 20px;
 }
 .customer-service li{
     padding: 10px;
@@ -685,6 +688,8 @@ footer a:hover {
     margin: 0;
     align-self: center;
 }
+.adImg img{ width: 60%;
+height: auto;}
 
 /*******************************************************
     7.Responsive design
@@ -853,7 +858,7 @@ p{font-size: 2rem;}
     .magazine ul{
         font-size: 2rem;
     }
-}
+
     
     /**contact us page large**/
     .contactUSpage{
