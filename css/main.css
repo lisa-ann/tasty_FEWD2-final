@@ -3,7 +3,7 @@
  ******************************************************/
 :root {
     --highlight-color: #ffd84c; /* yellow */
-    --light-color:  #fff;       /* white */
+    --light-color:  #fff;       /*  white */
     --dark-color: #444;         /* gray */
     --primary-color: #2251a7;   /* blue */
     --secondary-color: #65b504; /* green */
@@ -32,13 +32,17 @@ main{margin: 0 10px;}
 h1 {
     color:  var(--light-color);
     text-shadow: 2px 2px 2px var(--dark-color);
-    font-size: 3.8rem;
+    font-size: 4rem;
+  font-family: "Caveat", serif;
+}
+h2, h3, h4, h5, h6 {
+    color: var(--dark-color);
 }
 h2 {
-    font-size: 3rem;
+    font-size: 2.8rem;
 }
 h3 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
 }
 h6 {
     font-weight: bold;
@@ -50,6 +54,7 @@ p {
 
 img {
     height: auto;
+    width: 100%;
 }
 
 a, a:visited {
@@ -108,7 +113,7 @@ nav .material-symbols-outlined:hover {
 /* hamburger Menu*/
 .open-menu, .close-menu{
     position: absolute;
-    color:aliceblue;
+    color:  var(--highlight-color);
     cursor: pointer;
     font-size: 1.5rem;
     display: none;
@@ -127,8 +132,7 @@ nav .material-symbols-outlined:hover {
     background-color: var(--light-color);
     text-align: left;
     width: auto;
-    height: 35px;
-    border-bottom: solid 1px gray;
+    border-bottom: solid 1px  var(--dark-color);
 }
 .searchBar input {
     font-size: 1.5rem;
@@ -177,6 +181,7 @@ nav .material-symbols-outlined:hover {
 .dropdown{position:relative;}
 
 .dropdown:after{
+    color: var(--light-color);
     content:"\25BC";
     font-size: 1.5rem;
     display: block;
@@ -199,7 +204,6 @@ nav .material-symbols-outlined:hover {
 /*******************************************************
     4. MAIN BODY CONTENT
  ******************************************************/
-
 /*homepage*/
   /**hero**/
 .hero{
@@ -238,7 +242,7 @@ nav .material-symbols-outlined:hover {
 }
 .create-account-btn, .signin-button, .submit-button{
   background-color: var(--primary-color);
-  color: white;
+  color:  var(--light-color);
   font-size: 1.5rem;
   border: none;
   padding: 0.5rem 1.5rem;
@@ -253,38 +257,37 @@ nav .material-symbols-outlined:hover {
 
    /**latest recipe**/
 .latest-recipes h2, .tips-tricks h2{
-    border-bottom: solid 4px #fc8c00;
+    border-bottom: solid 4px var(--tertiary-color);
 }
 .recipe-carousel{
     display: flex;
     flex-wrap: wrap;
-    width: 600px;
 }
 .recipe-card{
     padding: 20px;
     text-align: center;
 }
 .recipe-card img{
-    width: 120px;
-    height: 170px;
     border-radius: 5%;
+    max-width: 120px;
+    max-height: 170px;
 }
 
  /**tips**/
  .tip-card{
     display: flex;
+     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     padding: 20px;
 }
 .tip-card img{
-    width: 200px;
-    height: 200px;
     border-radius: 50%;
+    max-width: 200px;
+    max-height: 200px;
 
 }
 .tip-card article{
-    width: 350px;
     padding: 15px;
 }
 
@@ -314,19 +317,15 @@ nav .material-symbols-outlined:hover {
     padding: 5px;
 }
 .book-card img, .productImg img{
-    width: 200px;
-    height: 250px;
     border-radius: 5%;
 }
 .cooker-card img{
-    width: 200px;
-    height: 200px;
     border-radius: 5%;
 }
 
 .add-to-cart {
   background-color: var(--primary-color);
-  color: white;
+  color:  var(--light-color);
   font-size: 1.5rem;
   border: none;
   padding: 0.5rem 1.5rem;
@@ -354,7 +353,6 @@ nav .material-symbols-outlined:hover {
     background-color: var(--secondary-color);
 }
 .holiday-special h1{
-    font-family: "Caveat", serif;
     font-size: 6rem;
     color: #eb4034;
     text-align: center;
@@ -399,14 +397,12 @@ a:hover {
 .signup-form p, .signBox{margin-bottom: 20px;}
 .signup-form input {
   padding: 0.75rem;
-  width: 250px;
   border: none;
   border-radius: 4px;
   margin-right: auto;
 }
 
 .create-account-btn{
-    width: 200px;
     align-self: center;
     margin-top: 20px;
 }
@@ -433,8 +429,6 @@ a:hover {
     font-weight: bold;
 }
 .productImg img{
-    width: 150px;
-    height: 200px;
     border-radius: 5%;
 }
 .product-info{
@@ -453,10 +447,6 @@ a:hover {
    
 .header-mission h1 {
     margin: 0;
-    color: #333;
-    font-size: 2rem;
-    font-weight: 600;
-    font-family: sans-serif;
     background-color:var(--highlight-color);
     padding: 1rem;
     text-align: center;
@@ -465,11 +455,10 @@ a:hover {
 }
 
 .mission {
-    background-image: url('../images/about-us-images/header-background.jpg'); /* Replace with your background image */
+    background-image: url('../images/about-us-images/header-background.jpg');
     background-size: cover;
     background-position: center;
     text-align: center;
-    color: black;
 }
 
 .mission-content p {
@@ -482,13 +471,9 @@ a:hover {
 /* journey page*/
    /**journey section 1...**/
 .journey h2 {
-    color: black;
     margin: 2rem 0;
-    font-family: sans-serif;
     font-weight: 600;
     margin-top: 3rem;
-    font-size: 1.5rem;
-    color: #333;
     text-align: center; 
 }
 
@@ -500,7 +485,6 @@ a:hover {
 
 .journey li a{
     font-size: 1.2rem;
-    color: black;
     margin-left: 2rem;
 }
 .journey li a:hover{
@@ -542,19 +526,14 @@ a:hover {
 
 .team-member h3 {
     margin: 0;
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: #333;
-    font-family: sans-serif;
     padding-bottom: 1rem
 }
 
 .team-member p {
     margin: 0.5rem 0 0;
-    font-size: 1rem;
     text-align: left;
     padding-left: 2rem;
-    color: black;
+    color: var(--dark-color);
     
 }
 /**MAGAZINE-PAGE**/
@@ -572,7 +551,7 @@ a:hover {
 }
 .magazine h3,h4{
     font-family: sans-serif;
-    color: black;
+    color: var(--dark-color);
     margin: 3rem 0;
 }
 .magazine h5{
@@ -765,9 +744,6 @@ footer a:hover {
     flex-direction: column;
     align-content: center;
    }
-  .sign-in-text{
-    margin-left: 200px;
-   }
     
     /**recipe section large**/
   .recipe-carousel{ flex-wrap: nowrap;}
@@ -824,8 +800,6 @@ p{font-size: 2rem;}
 
 .journey h2 {
     margin: 3rem 0;
-    font-size: 2.5rem;
-    color: #333;
 }
 
 .journey ul {
