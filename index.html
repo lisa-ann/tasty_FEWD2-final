@@ -24,14 +24,14 @@
                 <a href="index.html"><img src="images/logo.png" alt="Tasty Logo"></a>
             </figure>
             
-            <ul>
+    
                 <input type="checkbox" id="check">
                  <label for="check" class="open-menu"><span class="material-symbols-outlined">menu</span></label>
                  
                 <section class="menu">
                     <label for="check" class="close-menu"><span class="material-symbols-outlined">menu_open</span></label>
                     
-                     <section  class="nav-menu">
+                     <menu  class="nav-menu">
                          <!-- recipe flyout -->
                        <li class="dropdown">
                            <a href="pages/recipes.html">RECIPES </a>      
@@ -49,11 +49,11 @@
                        <li><a href="pages/about.html">OUR COMPANY</a></li>
                        
                        <li><a href="pages/contactUs.html">CONTACT US</a></li>
-                    </section>
+                    </menu>
                 </section>               
-            </ul>
+         
             
-            <a href="pages/contactUs.html" class="sign-in">SIGN IN</a>
+           <button class="sign-in" onclick="location.href='contactUs.html'">SIGN IN</button>
             
             <a href="pages/cartCheckOut.html"><span class="material-symbols-outlined">shopping_cart</span></a>  
         </nav>
@@ -65,25 +65,36 @@
         
     <!-- Hero Section -->
      <section class="hero">
-       <figure class="heroImg">
-         <img src="images/heroPageSaladLarge.jpg" alt="Rainbow Salad">
-       </figure>
-       
-        <section class="heroText">
-            <h2>What We're Cooking Today</h2>
-            <h1 class="heroTitle">Rainbow Salad</h1>
-            <a href="pages/recipes.html" class="recipe-link">See the recipe ...</a>
-        </section> 
-        
-        <section class="HomeSignup-form">
-                <p>Want more recipes? <a href="pages/contactUs.html">Sign up here</a>.</p>
-                <section class="signBox">
-                  <input type="email" placeholder="Email">
-                  <button class="create-account-btn">Create an account</button>
-                </section>
-                <p class="sign-in-text">Already have an account? <a href="pages/contactUs.html">Sign in here</a>.</p>
-        </section> 
-    </section>
+  <!-- Hero Image -->
+  <picture class="heroImg">
+    <!-- Mobile Image -->
+    <source media="(max-width: 768px)" srcset="images/heroPageSalad.png">
+    <!-- Desktop Image -->
+    <source media="(min-width: 769px)" srcset="images/heroPageSaladLarge.jpg">
+    <!-- Fallback Image -->
+    <img src="images/heroPageSaladLarge.jpg" alt="Rainbow Salad">
+  </picture>
+  
+  <!-- Hero Text Section -->
+  <div class="heroText">
+    <h2>What We're Cooking Today</h2>
+    <h1 class="heroTitle">Rainbow Salad</h1>
+    <a href="pages/recipes.html" class="recipe-link">See the recipe...</a>
+  </div>
+  
+  <!-- Signup Form Section -->
+  <div class="HomeSignup-form">
+    <p>Want more recipes? <a href="pages/contactUs.html">Sign up here</a>.</p>
+    <div class="signBox">
+      <input type="email" placeholder="Enter your email" aria-label="Email Address">
+      <button class="create-account-btn">Create an account</button>
+    </div>
+    <p class="sign-in-text">
+      Already have an account? <a href="pages/contactUs.html">Sign in here</a>.
+    </p>
+  </div>
+</section>
+
 
    <main>
     <!-- Latest Recipes Section -->
@@ -243,8 +254,6 @@
                 <a href="https://www.youtube.com/buzzfeedtasty" title="Go to Tasty.co on Youtube" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
             </section>
         </section>
-
-     </section>
      
     <section class="copyright">
            <a href="index.html"><img src="images/logo.png" alt="Tasty Logo"></a>
