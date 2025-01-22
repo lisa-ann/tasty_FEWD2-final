@@ -71,6 +71,10 @@ ol li {
     list-style: decimal;
     list-style-position: inside;
 }
+.text-center {
+    text-align: center;
+}
+
 /*******************************************************
     3. HEADER & NAV
  ******************************************************/
@@ -159,8 +163,14 @@ nav .material-symbols-outlined:hover {
     transition: all 0.2s ease-in-out;
     }
     ul {order: 1;}
-    .menu li {margin-top: 40px;}
-    .menu li a {padding: 10px;}
+    .menu li:first-child {
+        margin-top: 4rem;
+    }    
+    .menu li {
+        list-style: none;
+        margin-top: 2rem;
+    }
+    .menu li a {padding: 1rem;}
     .open-menu, .close-menu{display: block;}
     .open-menu{padding: 10px;
     margin-top: -20px;
@@ -230,9 +240,9 @@ nav .material-symbols-outlined:hover {
     font-size: 3rem;
 }
 .heroTitle {
-  font-family: "Caveat", serif;
   font-size: 8rem;
   margin-bottom: 1rem;
+    line-height: 1;
 }
 .HomeSignup-form{padding: 30px;}
 .HomeSignup-form p, .signBox{margin-bottom: 8px;}
@@ -437,7 +447,7 @@ a:hover {
 .product-info{
     width: 80%;
 }
-.product-grid{
+.product-grid {
     padding: 5px;
     border-bottom: solid .5px lightgray;
 }
@@ -455,9 +465,6 @@ a:hover {
     text-align: center;
     margin:3rem 0;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
-    text-shadow: none;
-    color: black;
-    font-family: sans-serif;
 }
 
 .mission {
@@ -491,7 +498,6 @@ a:hover {
 
 .journey li a{
     font-size: 2rem;
-    color: black;
     margin-left: 2rem;
 }
 .journey li a:hover{
@@ -587,7 +593,6 @@ a:hover {
 .signin-form, .contact-form{
     background-color: #ede8e8;
     font-size: 2rem;
-    font-weight: 80;
     padding: 30px 0;
     border-radius: 6px;
 }
@@ -691,8 +696,50 @@ footer a:hover {
 .adImg img{ width: 60%;
 height: auto;}
 
+
 /*******************************************************
-    7.Responsive design
+    7. FORMS
+ ******************************************************/
+input[type=submit], button {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    border: 0;
+    color:  var(--light-color);
+    font-family: "Assistant", sans-serif;
+    margin: 1rem auto;
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold
+}
+
+input[type=submit]:hover, button:hover {
+    background-color: var(--secondary-color);
+    color:  var(--light-color);
+    cursor: pointer;
+}
+
+input[type=text], input[type=number], input[type=email], input[type=tel], textarea, select {
+    border: 1px solid var(--dark-color);
+    font-family: "Assistant", sans-serif;
+    margin: 1rem 0 2rem;
+    padding: .75rem;
+    width: 90%;
+    display: block;
+}
+
+fieldset {
+    margin: 2rem 0;
+    padding: 2rem;
+}
+
+legend {
+    color: var(--primary-color);
+    border-bottom: 1px dashed var(--primary-color);
+    text-align: center;
+}
+
+/*******************************************************
+    8. MEDIA QUERIES
  ******************************************************/
 
 @media screen and (min-width:768px){
