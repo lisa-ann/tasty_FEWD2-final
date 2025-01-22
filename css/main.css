@@ -74,15 +74,14 @@ ol li {
 header {
     background-color: var(--primary-color);
     position: sticky;
-      top: 0;
-    z-index: 5;
     text-align: center;
+    top: 0;
+    z-index: 5;
 }
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
     margin: 0 auto;
 }
 nav .logo{margin-left: 20px;}
@@ -270,8 +269,8 @@ nav .material-symbols-outlined:hover {
 }
 .recipe-card img{
     border-radius: 5%;
-    max-width: 200px;
-    max-height: 150px;
+    max-width: 120px;
+    max-height: 170px;
 }
 
  /**tips**/
@@ -749,6 +748,10 @@ footer a:hover {
     /**recipe section large**/
   .recipe-carousel{ flex-wrap: nowrap;}
   .tips-carousel{display: flex;}
+  .recipe-card img{
+    width: 200px;
+    height: 250px;
+  }
     
     /**Products Section large **/
     .products-carousel {
