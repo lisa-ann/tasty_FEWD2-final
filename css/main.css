@@ -266,8 +266,8 @@ nav .material-symbols-outlined:hover {
     text-align: center;
 }
 .recipe-card img{
-    width: 200px;
-    height: 150px;
+    width: 120px;
+    height: 170px;
     border-radius: 5%;
 }
 
@@ -773,6 +773,10 @@ footer a:hover {
     /**recipe section large**/
   .recipe-carousel{ flex-wrap: nowrap;}
   .tips-carousel{display: flex;}
+  .recipe-card img{
+    width: 200px;
+    height: 250px;
+  }
     
     /**Products Section large **/
     .products-carousel {
