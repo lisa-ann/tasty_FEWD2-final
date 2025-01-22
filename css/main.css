@@ -295,7 +295,7 @@ nav .material-symbols-outlined:hover {
 }
 
  /**Products Section **/
-.products h2{border-bottom: solid 4px #65b504;}
+.products h2{border-bottom: solid 4px #var(--secondary-color);}
 .shopTitle, .books, .ware{
     display: flex;
     justify-content: space-around;
@@ -386,7 +386,7 @@ nav .material-symbols-outlined:hover {
 }
 .discount a{align-self: flex-end;}
 .discount a, .signup-form a{
-    color:#ffd84c;
+    color:var(--highlight-color);
 }
 a:hover {
     color: var(--primary-color);
@@ -410,12 +410,12 @@ a:hover {
     margin-top: 20px;
 }
 .create-account-btn:hover {
-    background-color: #ffd84c;
+    background-color: var(--highlight-color);
     color: var(--dark-color);
 }
 
    /** product section**/
-.products { border-bottom:solid 4px #ffd84c; }
+.products { border-bottom:solid 4px var(--highlight-color); }
    /**product categories**/
 .product-categories{
     margin: 10px;
@@ -735,9 +735,8 @@ footer a:hover {
     padding: 30px;
    }
   .recipe-link {
-  color: #65b504;
+  color: var(--secondary-color);
   text-decoration: none;
-  margin-left: 300px;
   }
   .HomeSignup-form {
     display: flex;
@@ -749,8 +748,8 @@ footer a:hover {
   .recipe-carousel{ flex-wrap: nowrap;}
   .tips-carousel{display: flex;}
   .recipe-card img{
-    width: 200px;
-    height: 250px;
+    max-width: 200px;
+    max-height: 250px;
   }
     
     /**Products Section large **/
@@ -831,7 +830,7 @@ p{font-size: 2rem;}
 
 .journey ul li a {
     text-decoration: none;
-    color: #444;
+    color: var(--dark-color);
     font-weight:600;
     transition: color 0.3s ease;
     text-align: center;

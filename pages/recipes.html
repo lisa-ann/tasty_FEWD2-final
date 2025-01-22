@@ -67,15 +67,20 @@
 
     <!-- Hero Section -->
 
-        <section class="hero contactUSpage">       
-           <picture>
-                <img src="../images/heroPageSaladLarge.jpg" alt="Rainbow Salad">
-           </picture>
+        <section class="hero">
+           <picture class="heroImg">
+         <!-- Mobile Image-->
+          <source media="(max-width: 768px)" srcset="../images/heroPageSalad.png">
+          <!-- desktop Image-->
+          <source media="(min-width: 769px)" srcset="../images/heroPageSaladLarge.jpg">
+         <img src="../images/heroPageSaladLarge.jpg" alt="Rainbow Salad">
+       </picture>
+            <section class="heroText">
             <h1>Rainbow Salad</h1>
-            <p>This salad is a burst of freshness in the midst of winter!  It's a salad that'll brighten up your plate and your taste buds. Packed with flavor and packed with nutrition, it's a winner all year round! 
+            <p>This salad is a burst of freshness in the midst of winter!  It's a salad that'll brighten up your plate and your taste buds. Packed with flavor and packed with nutrition, it's a winner all year round!
             <a href="rainbow-salad.html" class="recipe-link">See the recipe ...</a></p>
          </section>
-
+        </section>
         <!-- Latest Recipes Section -->
         <section class="latest-recipes">
             <h2>Latest Recipes</h2>
