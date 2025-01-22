@@ -343,7 +343,7 @@ nav .material-symbols-outlined:hover {
 
 
 /*tips page*/
-#signupTips{
+.signup-news, .signup-form{
     background-color: var(--secondary-color);
     padding: 20px;
 }
