@@ -462,10 +462,11 @@ a:hover {
     text-align: center;
     margin:3rem 0;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    text-shadow: none;
 }
 
 .mission {
-    background-image: url('../images/about-us-images/header-background.jpg'); /* Replace with your background image */
+    background-image: url('../images/header-background.jpg'); /* Replace with your background image */
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -499,7 +500,7 @@ a:hover {
 }
 
 .journey li a{
-    font-size: 1.2rem;
+    font-size: 2rem;
     color: black;
     margin-left: 2rem;
 }
@@ -521,7 +522,7 @@ a:hover {
     border-radius: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 90%;
-    max-width: 700px;
+    max-width: 500px;
     text-align: left;
     display: flex;
     gap: 2rem;
@@ -551,7 +552,7 @@ a:hover {
 
 .team-member p {
     margin: 0.5rem 0 0;
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-align: left;
     padding-left: 2rem;
     color: black;
@@ -681,7 +682,7 @@ footer h2 {
 .payment-icons img{
     width:20%;
     height:20%;
-    margin: 0 20px;
+   
 }
 .social-icons svg{width: 30%;}
 
