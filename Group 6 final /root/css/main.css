@@ -138,6 +138,7 @@ nav .material-symbols-outlined:hover {
     margin-left: 10px;
     
 }
+
 @media screen and (max-width:768px){
     .menu{
     flex-direction: column;
@@ -463,10 +464,11 @@ a:hover {
     text-align: center;
     margin:3rem 0;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    text-shadow: none;
 }
 
 .mission {
-    background-image: url('../images/about-us-images/header-background.jpg'); /* Replace with your background image */
+    background-image: url('../images/header-background.jpg'); /* Replace with your background image */
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -488,7 +490,7 @@ a:hover {
     font-family: sans-serif;
     font-weight: 600;
     margin-top: 3rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #333;
     text-align: center; 
 }
@@ -500,7 +502,7 @@ a:hover {
 }
 
 .journey li a{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: black;
     margin-left: 2rem;
 }
@@ -512,7 +514,10 @@ a:hover {
 .team {
     text-align: center;
     margin: 3rem 0;
-    padding-bottom: 2rem;  
+    padding-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .team-member {
@@ -552,7 +557,7 @@ a:hover {
 
 .team-member p {
     margin: 0.5rem 0 0;
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-align: left;
     padding-left: 2rem;
     color: black;
@@ -582,6 +587,8 @@ a:hover {
     margin: 4rem;
     text-align: end;
 
+}
+.magazine a{color: var(--secondary-color);;
 }
 
 /*contact us page*/
@@ -665,7 +672,7 @@ footer h2 {
 }
 .customer-service, .payment-method, .social-media {
     align-self: center;
-    margin; 20px;
+    margin: 20px;
 }
 .customer-service li{
     padding: 10px;
@@ -861,11 +868,7 @@ p{font-size: 2rem;}
     font-size: 2rem;
     margin: 0;
 }
-    .team{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
+ 
  /*OUR-JOURNEY page large*/
     .magazine{
         font-size: 3rem;
@@ -873,7 +876,7 @@ p{font-size: 2rem;}
     .magazine ul{
         font-size: 2rem;
     }
-}
+
     
     /**contact us page large**/
     .contactUSpage{
@@ -901,5 +904,5 @@ p{font-size: 2rem;}
     .social-media{
     grid-column: 2/3;
     grid-row: 2/3;
-    }   
+    } 
 }
