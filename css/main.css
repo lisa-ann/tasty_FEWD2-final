@@ -295,7 +295,7 @@ nav .material-symbols-outlined:hover {
 }
 
  /**Products Section **/
-.products h2{border-bottom: solid 4px #var(--secondary-color);}
+.products h2{border-bottom: solid 4px var(--secondary-color);}
 .shopTitle, .books, .ware{
     display: flex;
     justify-content: space-around;
